@@ -1,5 +1,3 @@
-[![Build Status](https://dev.azure.com/revery-ui/revery/_apis/build/status/revery-ui.revery-quick-start?branchName=master)](https://dev.azure.com/revery-ui/revery/_build/latest?definitionId=4?branchName=master)
-
 # Revery Quick Start
 
 This is a minimal Revery application to get you started.
