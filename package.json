@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "format": "bash -c \"refmt --in-place **/*.re\"",
-    "run": "esy x App"
+    "start": "esy build && esy x App"
   },
   "esy": {
     "build": "refmterr dune build -p App",
@@ -16,31 +16,19 @@
     "bundleId": "com.example.app",
     "displayName": "Revery Example App",
     "mainExecutable": "App",
-    "windows": {
-      "packages": [
-        "zip"
-      ],
-      "iconFile": "assets/icon.ico"
-    },
+    "windows": { "packages": [ "zip" ], "iconFile": "assets/icon.ico" },
     "darwin": {
-      "packages": [
-        "tar",
-        "dmg"
-      ],
+      "packages": [ "tar", "dmg" ],
       "iconFile": "assets/icon.icns"
     },
-    "linux": {
-      "packages": [
-        "tar",
-        "appimage"
-      ]
-    }
+    "linux": { "packages": [ "tar", "appimage" ] }
   },
   "dependencies": {
-    "revery": "revery-ui/revery#8fd380c",
-    "@opam/dune": "2.5.0",
     "@glennsl/timber": "^1.2.0",
-    "esy-macdylibbundler": "*"
+    "@opam/dune": "2.5.0",
+    "esy-macdylibbundler": "*",
+    "reason-fontkit": "^2.8.0",
+    "revery": "revery-ui/revery#8fd380c"
   },
   "devDependencies": {
     "ocaml": "~4.9.0",
